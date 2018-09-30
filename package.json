@@ -1,0 +1,27 @@
+{
+  "name": "recipes-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nainarazz/recipes-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nainarazz/recipes-api/issues"
+  },
+  "homepage": "https://github.com/nainarazz/recipes-api#readme"
+}
