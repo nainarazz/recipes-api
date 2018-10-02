@@ -12,4 +12,14 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/search", async (req, res) => {
+  const recipe = await Recipe.find({ name: req.query.name });
+  res.send(recipe);
+});
+
+router.get("/:id", async (req, res) => {
+  const recipe = await Recipe.findById(req.params.id);
+  res.send(recipe);
+});
+
 module.exports = router;
