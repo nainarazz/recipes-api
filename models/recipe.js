@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Joi = require("joi");
 
 const Recipe = mongoose.model(
   "Recipe",
@@ -39,4 +40,22 @@ const Recipe = mongoose.model(
   "Recipe"
 );
 
+function validateRecipe(recipe) {
+  const schema = {
+    name: Joi.string()
+      .min(3)
+      .max(255)
+      .required(),
+    email: Joi.string()
+      .email()
+      .required(),
+    procedure: Joi.array().required(),
+    ingredients: Joi.array().required(),
+    category: Joi.string()
+  };
+
+  return Joi.validate(recipe, schema);
+}
+
 exports.Recipe = Recipe;
+exports.validate = validateRecipe;
